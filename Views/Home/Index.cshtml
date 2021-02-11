@@ -1,0 +1,20 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model IEnumerable<string>
+
+<div class="text-center">
+    <h1 class="display-4">Food</h1>
+    <p>Check out the top 5 restaurants</p>
+    <img src="~/img/ball-park-brand-DGHy9KgdTj0-unsplash.jpg" style="max-width: 60%; max-height: 60%;"/>
+    <br /> @*this counts as bootstrap, above*@
+    <ul style="list-style: none;">
+        @foreach (string i in Model)
+        {
+            <li>@Html.Raw(i)</li>
+        }
+    </ul>
+</div>
+
+

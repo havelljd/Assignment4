@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Submit";
+}
+
+@model Restaurant4.Models.Restaurants  
+
+<body>
+    <h1>@ViewData["Title"]</h1>
+    <br />
+    <h2>Enter the restaurant below:</h2>
+    <form asp-action="SubmitRestaurant" method="post">
+        <label asp-for="Name">Enter your name here:</label>
+        <input type="text" id="Name" asp-for="Name" />
+        <br />
+        <label asp-for="RestaurantName">Enter restaurant name here:</label>
+        <input type="text" id="RestaurantName" asp-for="RestaurantName" />
+        <br />
+        <label asp-for="FavoriteDish">Enter your favorite dish here:</label>
+        <input type="text" id="FavoriteDish" asp-for="FavoriteDish" />
+        <br />
+        <label asp-for="PhoneNumber">Enter phone number here:</label>
+        <input type="text" placeholder="###-###-####"id="PhoneNumber" asp-for="PhoneNumber" />
+        <br />
+        <button class="btn btn-dark"type="submit" value="Submit" id="submit">Submit</button>
+    </form>
+    <div asp-validation-summary="All"></div>
+</body>
